@@ -1872,10 +1872,9 @@ so fork can set it.
         } | ) 
 
  bootstrap addSlotsTo: bootstrap stub -> 'traits' -> 'string' -> () From: ( | {
-         'Category: padding\x7fModuleInfo: Module: string InitialContents: FollowSlot\x7fVisibility: private'
+         'Category: padding\x7fModuleInfo: Module: string InitialContents: InitializeToExpression: (\'\\r\\n\\t \')\x7fVisibility: private'
         
-         whiteSpace = ' 	\x0d
-'.
+         whiteSpace = '\r\n\t '.
         } | ) 
 
 
