@@ -1,7 +1,7 @@
  '$Revision: 30.16 $'
  '
-Copyright 1992-2012 AUTHORS.
-See the LICENSE file for license information.
+Copyright 1992-2014 AUTHORS.
+See the legal/LICENSE file for license information and legal/AUTHORS for authors.
 '
 
 
@@ -763,18 +763,19 @@ Return the expanded file name.\x7fModuleInfo: Module: abstract_OS InitialContent
  bootstrap addSlotsTo: bootstrap stub -> 'traits' -> 'abstractFile' -> () From: ( | {
          'Category: reading\x7fModuleInfo: Module: abstract_OS InitialContents: FollowSlot\x7fVisibility: public'
         
-         readLine = ( | {
-                 'ModuleInfo: Module: unix InitialContents: FollowSlot'
-                
-                 buf.
-                }  {
-                 'ModuleInfo: Module: unix InitialContents: FollowSlot'
-                
-                 line <- ''.
-                } 
+         readLine = ( |
+            | readLineIfFail: [error: 'readLine: read failed']).
+        } | ) 
+
+ bootstrap addSlotsTo: bootstrap stub -> 'traits' -> 'abstractFile' -> () From: ( | {
+         'Category: reading\x7fModuleInfo: Module: abstract_OS InitialContents: FollowSlot\x7fVisibility: public'
+        
+         readLineIfFail: fb = ( |
+             buf.
+             line <- ''.
             | 
             "Read up to and including first \n - skip this \n."
-            [ buf: readCount: 1. (buf != '\n') && [atEOF not] ] whileTrue: [ 
+            [ buf: readCount: 1 IfFail: fb. (buf != '\n') && [atEOF not] ] whileTrue: [ 
                 line: line, buf.
             ].
             line).

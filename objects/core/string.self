@@ -1,7 +1,7 @@
  'Sun-$Revision: 30.23 $'
  '
-Copyright 1992-2012 AUTHORS.
-See the LICENSE file for license information.
+Copyright 1992-2014 AUTHORS.
+See the legal/LICENSE file for license information and legal/AUTHORS for authors.
 '
 
 
@@ -1874,8 +1874,7 @@ so fork can set it.
  bootstrap addSlotsTo: bootstrap stub -> 'traits' -> 'string' -> () From: ( | {
          'Category: padding\x7fModuleInfo: Module: string InitialContents: FollowSlot\x7fVisibility: private'
         
-         whiteSpace = ' 	
-
+         whiteSpace = ' 	\x0d
 '.
         } | ) 
 
