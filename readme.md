@@ -18,4 +18,22 @@ For information on:
 [2]: http://handbook.selflanguage.org/4.5/buildvm.html
 [3]: http://handbook.selflanguage.org/4.5/buildworld.html
 
+Building On Fedora Linux
+------------------------
+    # su
+    
+    # yum install git
+    # yum install cmake
+    
+    # yum install libX11-devel
+    # yum install libXext-devel
+    # yum install ncurses-devel
+    # exit
+    
+    # git clone https://github.com/AaronNGray/self
+    
+    # mkdir self-build
+    # cd self-build
+    # cmake ../self
+    # cmake --build .
 
