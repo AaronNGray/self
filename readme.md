@@ -37,3 +37,15 @@ Building On Fedora Linux
     # cmake ../self
     # cmake --build .
 
+Building on Debian
+------------------
+    # su
+    # apt-get install xorg-dev
+    # apt-get install ncurses-dev
+    # apt-get install cmake
+    
+    # cd vm
+    # cmake .
+    # cmake --build .
+    
+    
