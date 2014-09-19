@@ -44,8 +44,11 @@ Building on Debian
     # apt-get install ncurses-dev
     # apt-get install cmake
     
-    # cd vm
-    # cmake .
+    # git clone https://github.com/AaronNGray/self
+    
+    # mkdir self-build
+    # cd self-build
+    # cmake ../self
     # cmake --build .
     
     
